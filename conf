@@ -5,7 +5,9 @@
 sudo apt update
 sudo apt install nginx
 3.xstiku.conf
+source
 /var/www/xstiku
+conf
 /etc/nginx/conf.d/xstiku.conf
 /etc/nginx/sites-available/default
 /etc/nginx/sites-available/xstiku.conf
