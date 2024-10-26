@@ -10,6 +10,8 @@ source
 conf
 /etc/nginx/conf.d/xstiku.conf
 /etc/nginx/sites-available/default
+root /var/www/xstiku;
+index index.html;
 /etc/nginx/sites-available/xstiku.conf
 server {
      listen 80;
