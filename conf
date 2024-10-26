@@ -6,6 +6,8 @@ sudo apt update
 sudo apt install nginx
 3.xstiku.conf
 /etc/nginx/conf.d/xstiku.conf
+/etc/nginx/sites-available/default
+/etc/nginx/sites-available/xstiku.conf
 server {
      listen 80;
      #server_name 39.107.59.4;
