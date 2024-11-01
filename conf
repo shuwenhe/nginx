@@ -5,22 +5,23 @@
 sudo apt update
 sudo apt install nginx
 3.xstiku.conf
-/etc/nginx/sites-available/xstiku.conf
+/etc/nginx/conf.d/xstiku.conf
 server {
      listen 80;
-     server_name xstiku;
+     #server_name 39.107.59.4;
+     server_name xstiku.com;
 
      location / {
-         proxy_pass http://39.107.59.4:8080; # 根据需要修改
+         proxy_pass http://localhost:8080; # 根据需要修改
          proxy_set_header Host $host;
          proxy_set_header X-Real-IP $remote_addr;
          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
          proxy_set_header X-Forwarded-Proto $scheme;
      }
 }
-4.
-sudo ln -s /etc/nginx/sites-available/xstiku.conf /etc/nginx/sites-enabled/
 5.test
 sudo nginx -t
 6.reload
 sudo systemctl reload nginx
+7.nohup
+nohup ./xstiku &
