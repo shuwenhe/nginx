@@ -1,8 +1,9 @@
+/var/www/xstiku
 /etc/nginx/sites-available
 
 server {
      listen 80;
-     server_name www.xstiku.com;
+     server_name xstiku;
 
      location / {
          proxy_pass http://39.107.59.4:8080; # 根据需要修改
