@@ -1,2 +1,1 @@
-sudo service nginx status
-sudo systemctl status nginx
+systemctl status nginx
