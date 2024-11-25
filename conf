@@ -1,38 +1,10 @@
-0.code
-/var/www/xstiku
+1.
+更新DNS记录：将www.xstiku.com的A记录指向39.107.59.4
 
-1.更新DNS记录：将www.xstiku.com的A记录指向39.107.59.4
-
-2.install
-sudo apt update
-sudo apt install nginx
-
-3.xstiku.conf
-source
-/var/www/xstiku
-conf
-/etc/nginx/conf.d/xstiku.conf
-server {
-     listen 80;
-     #server_name 39.107.59.4;
-     server_name xstiku.com;
-
-     location / {
-         proxy_pass http://localhost:8080; # 根据需要修改
-         proxy_set_header Host $host;
-         proxy_set_header X-Real-IP $remote_addr;
-         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-         proxy_set_header X-Forwarded-Proto $scheme;
-     }
-}
-/etc/nginx/sites-available/default
-root /var/www/xstiku;
-index index.html;
-
+2.
 /etc/nginx/sites-available/xstiku.conf
 server {
      listen 80;
-     #server_name 39.107.59.4;
      server_name xstiku.com;
 
      location / {
@@ -44,11 +16,11 @@ server {
      }
 }
 
-5.test
+3.
 sudo nginx -t
 
-6.reload
+4.
 sudo systemctl reload nginx
 
-7.nohup
+5.nohup
 nohup ./xstiku &
