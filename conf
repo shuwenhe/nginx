@@ -1,9 +1,12 @@
 0.code
 /var/www/xstiku
+
 1.更新DNS记录：将www.xstiku.com的A记录指向39.107.59.4
+
 2.install
 sudo apt update
 sudo apt install nginx
+
 3.xstiku.conf
 source
 /var/www/xstiku
