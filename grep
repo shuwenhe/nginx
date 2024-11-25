@@ -1,0 +1,1 @@
+grep -r "server_name www.xstiku.com" /etc/nginx/
