@@ -8,7 +8,7 @@ server {
      server_name xstiku.com;
 
      location / {
-         proxy_pass http://localhost:8080; # 根据需要修改
+         proxy_pass http://localhost:8080;
          proxy_set_header Host $host;
          proxy_set_header X-Real-IP $remote_addr;
          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -16,7 +16,7 @@ server {
      }
 }
 
-3.符号链接
+3.
 sudo ln -s /etc/nginx/sites-available/shuwen.conf /etc/nginx/sites-enabled/
 
 4.
