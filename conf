@@ -2,7 +2,7 @@
 更新DNS记录：将www.xstiku.com的A记录指向39.107.59.4
 
 2.
-/etc/nginx/sites-available/xstiku.conf
+/etc/nginx/sites-available/shuwen.conf
 server {
      listen 80;
      server_name xstiku.com;
@@ -16,11 +16,14 @@ server {
      }
 }
 
-3.
-sudo nginx -t
+3.符号链接
+sudo ln -s /etc/nginx/sites-available/shuwen.conf /etc/nginx/sites-enabled/
 
 4.
+sudo nginx -t
+
+5.
 sudo systemctl reload nginx
 
-5.nohup
+6.nohup
 nohup ./xstiku &
