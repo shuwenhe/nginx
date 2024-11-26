@@ -26,4 +26,4 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 6.nohup
-nohup ./xstiku &
+nohup ./shuwen-service > log 2>&1 &
