@@ -2,9 +2,5 @@ nginx配置将本地
 curl http://localhost:8080/getUserData
 远程访问
 curl http://39.107.59.4/getUserData
+curl http://www.xstiku.com/getUserData
 本地可以访问远程访问不了
-
-
-
-
-
