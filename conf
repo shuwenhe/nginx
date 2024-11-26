@@ -25,5 +25,8 @@ sudo nginx -t
 5.
 sudo systemctl reload nginx
 
-6.nohup
+6.
+tail -f /var/log/nginx/error.log
+
+7.nohup
 nohup ./shuwen-service > log 2>&1 &
