@@ -1,1 +1,2 @@
-apt-get install nginx
+apt-get update
+apt-get --reinstall install nginx
