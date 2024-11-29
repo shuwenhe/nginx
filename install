@@ -1,2 +1,4 @@
 apt-get update
+apt-get remove --purge nginx nginx-common
 apt-get --reinstall install nginx
+apt-get install nginx
