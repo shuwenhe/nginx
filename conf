@@ -30,3 +30,9 @@ tail -f /var/log/nginx/error.log
 
 7.nohup
 nohup ./shuwen-service > log 2>&1 &
+
+8.
+ufw disable
+
+9.
+systemctl stop  firewalld
